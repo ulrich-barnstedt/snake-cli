@@ -11,7 +11,7 @@ A simple snake implementation written in JS, designed for use in the terminal wi
 
 #### Keys
 
-- W/A/S/D && Up/Right/Down/Left - Movement
+- W/A/S/D or Up/Right/Down/Left - Movement
 - R - Reset
 
 #### Credits
