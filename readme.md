@@ -7,6 +7,7 @@ A simple snake implementation written in JS, designed for use in the terminal wi
 - Clone repo
 - Open terminal
 - Go to repo
+- `git submodule init`
 - `git submodule update --remote --merge`
 - `npm install`
 - `node index.js`
