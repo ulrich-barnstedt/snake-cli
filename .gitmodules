@@ -1,3 +1,4 @@
 [submodule "snake-js"]
 	path = snake-js
 	url = https://github.com/OliverKovacs/snake-js.git
+	update = merge
