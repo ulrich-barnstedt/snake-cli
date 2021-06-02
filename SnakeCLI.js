@@ -2,6 +2,7 @@ const Snake = require("./snake-js/index");
 const Render = require("buffer-render");
 const Input = require("readline-char");
 const chalk = require("chalk");
+const start = Date.now();
 
 module.exports = class SnakeCLI {
     constructor (
@@ -39,12 +40,15 @@ module.exports = class SnakeCLI {
         if (v === -1) return chalk.rgb(...this.foodColor)(this.char);
         if (this.input.blocked) return chalk.red(this.char);
 
-        const s = 0.5;
+        const t = Date.now() - start;
+        const s1 = 0.5;
+        const s2 = 0.001;
         const color = [
-            Math.floor(127.5 * (Math.sin(v * s + 0 * Math.PI / 3) + 1)),
-            Math.floor(127.5 * (Math.sin(v * s + 2 * Math.PI / 3) + 1)),
-            Math.floor(127.5 * (Math.sin(v * s + 4 * Math.PI / 3) + 1)),
+            Math.floor(127.5 * (Math.sin(v * s1 + t * s2 + 0 * Math.PI / 3) + 1)),
+            Math.floor(127.5 * (Math.sin(v * s1 + t * s2 + 2 * Math.PI / 3) + 1)),
+            Math.floor(127.5 * (Math.sin(v * s1 + t * s2 + 4 * Math.PI / 3) + 1)),
         ];
+
         return chalk.rgb(...color)(this.char);
     }
 
